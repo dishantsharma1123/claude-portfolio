@@ -1,20 +1,27 @@
-import './globals.css';
+import "./globals.css";
+import type { Metadata, Viewport } from "next";
+import { Inter, Newsreader } from "next/font/google";
 
-export const metadata = {
-  title: 'Dishant Sharma | AI Portfolio',
-  description: 'AI-Integrated Full-Stack Engineer Portfolio',
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const serif = Newsreader({ subsets: ["latin"], variable: "--font-serif", display: "swap" });
+
+export const metadata: Metadata = {
+  title: "Dishant Sharma AI",
+  description: "Chat with an AI assistant about Dishant Sharma's experience, skills, and projects.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// viewport-fit=cover lets safe-area insets apply on notched devices
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#FAF9F5",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="antialiased">
-        {children}
-      </body>
+    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

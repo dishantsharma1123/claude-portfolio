@@ -6,7 +6,7 @@
 ## Technical Stack & Infrastructure
 - [cite_start]**Languages:** JavaScript, TypeScript, Java, Python[cite: 94].
 - [cite_start]**Frontend:** React.js, Next.js, Redux, HTML, CSS, Tailwind CSS[cite: 94].
-- [cite_start]**Backend & APIs:** Node.js, FastAPI, REST APIs, Microservices, Spring Boot, Spring Framework[cite: 6, 7, 95].
+- [cite_start]**Backend & APIs:** Node.js, FastAPI, REST APIs, Microservices[cite: 6, 7, 95].
 - [cite_start]**Databases & Search:** PostgreSQL, MongoDB (100th percentile certification), Redis, Elasticsearch, OpenSearch[cite: 10, 95].
 - [cite_start]**Infrastructure & Security:** Docker, Kubernetes, CI/CD, Git, JWT, OAuth2, CSRF, Authentication[cite: 96].
 

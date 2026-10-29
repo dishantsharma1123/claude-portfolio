@@ -1,0 +1,59 @@
+# FastAPI backend
+
+# Env files (DATABASE_URL, OPENROUTER_API_KEY, ...)
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python bytecode and build artefacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test, lint and type-check caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local vector stores, databases and caches
+*.sqlite
+*.sqlite3
+*.db
+chroma/
+chroma_db/
+faiss_index/
+.cache/
+
+# Stray Node files in this folder
+node_modules/
+
+# Logs
+*.log
+logs/
+
+# Misc
+.DS_Store
+*.pem
+*.key

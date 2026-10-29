@@ -1,20 +1,49 @@
-venv/
+# Repo-wide rules. frontend/.gitignore and backend/.gitignore add app-specific ones.
 
-# Environments
+# Secrets and environment files (any folder). Commit only *.example templates.
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+id_ed25519*
+secrets/
+credentials*.json
+service-account*.json
 
-# Backend
-backend/venv/
-backend/__pycache__/
-backend/*.pyc
+# Python virtual environments and caches (any folder)
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
 
-# Frontend
-frontend/node_modules/
-frontend/.next/
-frontend/out/
-frontend/build/
+# Node (any folder)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# OS/System
+# Logs and local databases
+*.log
+logs/
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+
+# Editors and OS files
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*~
