@@ -11,9 +11,18 @@ load_dotenv()
 
 app = FastAPI()
 
+# Local dev origins plus any deployed frontends listed in ALLOWED_ORIGINS
+# (comma-separated, e.g. "https://my-site.vercel.app,https://www.example.com").
+LOCAL_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000"]
+ALLOWED_ORIGINS = LOCAL_ORIGINS + [
+    origin.strip().rstrip("/")
+    for origin in os.getenv("ALLOWED_ORIGINS", "").split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
